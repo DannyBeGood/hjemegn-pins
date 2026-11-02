@@ -1,0 +1,24 @@
+# By-strøm (O61): lægger dagens pins i RSS-feeds hver morgen kl. ca. 6 dansk tid.
+name: Dagens pins
+on:
+  schedule:
+    - cron: '7 5 * * *'
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  udgiv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python udgiv.py
+      - name: Gem feeds
+        run: |
+          git config user.name "hjemegn-pins"
+          git config user.email "hjemegn@gmail.com"
+          git add feeds
+          git diff --cached --quiet || git commit -m "Dagens pins $(date -u +%F)"
+          git push
