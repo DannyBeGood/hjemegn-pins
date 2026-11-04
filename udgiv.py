@@ -7,7 +7,8 @@ Kun pins med status "klar" kommer med, og kun pins som billedkontrollen og tekst
 GODKENDT (kraev_billedkontrol / kraev_tekstkontrol i indstillinger.json). Pins med en dato i fremtiden kommer aldrig i feedet,
 så Pinterest ikke kan udgive en hel måned på én dag.
 
-Brug:  python udgiv.py [--dato 2026-11-08] [--base-url https://…]
+Brug:  python udgiv.py [--dato 2026-11-08] [--base-url https://…] [--land se]
+Med --land se bruges undermappen se/ (egen kø, egne feeds, egne billeder) til profilen @hjemegnse.
 """
 from __future__ import annotations
 
@@ -26,6 +27,8 @@ KO = HER / 'ko.json'
 INDSTILLINGER = HER / 'indstillinger.json'
 FEEDS = HER / 'feeds'
 MAKS_ITEMS = 30
+LAND = {'dk': dict(link='https://www.hjemegn.dk/', beskrivelse='Byplakater fra HjemEgn til tavlen {tavle}', sprog='da-dk'),
+        'se': dict(link='https://www.hjemegn.se/', beskrivelse='Affischer från HjemEgn till anslagstavlan {tavle}', sprog='sv-se')}
 
 
 def slug(s: str) -> str:
@@ -40,14 +43,14 @@ def dansk_dato() -> dt.date:
     return (nu + dt.timedelta(hours=1 if nu.month in (11, 12, 1, 2, 3) else 2)).date()
 
 
-def rss(tavle: str, items: list[dict], base: str) -> str:
+def rss(tavle: str, items: list[dict], base: str, land: str = 'dk') -> str:
     e = html.escape
     nu = email.utils.format_datetime(dt.datetime.now(dt.timezone.utc))
     ud = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">', '<channel>',
-          f'<title>HjemEgn: {e(tavle)}</title>', '<link>https://www.hjemegn.dk/</link>',
-          f'<description>Byplakater fra HjemEgn til tavlen {e(tavle)}</description>',
-          '<language>da-dk</language>', f'<lastBuildDate>{nu}</lastBuildDate>']
+          f'<title>HjemEgn: {e(tavle)}</title>', f'<link>{LAND[land]["link"]}</link>',
+          f'<description>{LAND[land]["beskrivelse"].format(tavle=e(tavle))}</description>',
+          f'<language>{LAND[land]["sprog"]}</language>', f'<lastBuildDate>{nu}</lastBuildDate>']
     for p in items:
         billede = f'{base}/pins/{p["fil"]}'
         tid = dt.datetime.fromisoformat(p['dato']).replace(hour=6, tzinfo=dt.timezone.utc)
@@ -66,13 +69,16 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument('--dato', help='udgiv som om det var denne dato (test)')
     ap.add_argument('--base-url')
+    ap.add_argument('--land', default='dk', choices=sorted(LAND))
     a = ap.parse_args()
-    ind = json.loads(INDSTILLINGER.read_text(encoding='utf-8'))
+    rod = HER if a.land == 'dk' else HER / a.land
+    ko_fil, indstillinger, feeds = rod / KO.name, rod / INDSTILLINGER.name, rod / FEEDS.name
+    ind = json.loads(indstillinger.read_text(encoding='utf-8'))
     base = (a.base_url or os.environ.get('HJEMEGN_PINS_URL') or ind['base_url']).rstrip('/')
     i_dag = dt.date.fromisoformat(a.dato) if a.dato else dansk_dato()
-    ko = json.loads(KO.read_text(encoding='utf-8'))
+    ko = json.loads(ko_fil.read_text(encoding='utf-8'))
     tavler = sorted({p['tavle'] for p in ko})
-    FEEDS.mkdir(exist_ok=True)
+    feeds.mkdir(exist_ok=True)
     udgivet = 0
     for tavle in tavler:
         items = [p for p in ko if p['tavle'] == tavle and p['status'] == 'klar'
@@ -82,7 +88,7 @@ def main() -> None:
         items.sort(key=lambda p: p['id'], reverse=True)
         items = items[:MAKS_ITEMS]
         udgivet += len(items)
-        (FEEDS / f'{slug(tavle)}.xml').write_text(rss(tavle, items, base), encoding='utf-8')
+        (feeds / f'{slug(tavle)}.xml').write_text(rss(tavle, items, base, a.land), encoding='utf-8')
     print(f'{i_dag}: {len(tavler)} feeds, {udgivet} items i alt')
 
 

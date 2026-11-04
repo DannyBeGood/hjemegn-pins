@@ -1,4 +1,4 @@
-# By-strøm (O61): lægger dagens pins i RSS-feeds. Fire forsøg om morgenen (dansk tid 4.23, 6.23, 8.23, 10.23), fordi GitHub kan forsinke eller droppe planlagte kørsler (3/11: 7,6 timer forsinket). Kørslen er ufarlig at gentage.
+# By-strøm (O61): lægger dagens pins i RSS-feeds, dansk og svensk. Fire forsøg om morgenen (dansk tid 4.23, 6.23, 8.23, 10.23), fordi GitHub kan forsinke eller droppe planlagte kørsler (3/11: 7,6 timer forsinket). Kørslen er ufarlig at gentage.
 name: Dagens pins
 on:
   schedule:
@@ -15,10 +15,11 @@ jobs:
         with:
           python-version: '3.12'
       - run: python udgiv.py
+      - run: python udgiv.py --land se
       - name: Gem feeds
         run: |
           git config user.name "hjemegn-pins"
           git config user.email "hjemegn@gmail.com"
-          git add feeds
+          git add feeds se/feeds
           git diff --cached --quiet || git commit -m "Dagens pins $(date -u +%F)"
           git push
