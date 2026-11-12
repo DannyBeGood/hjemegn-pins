@@ -182,19 +182,6 @@
   "tekstkontrol": "GODKENDT"
  },
  {
-  "id": "2026-11-17-se-fotokollage-med-24-foton-mos",
-  "dato": "2026-11-17",
-  "tavle": "Presentidéer",
-  "status": "klar",
-  "titel": "Fotokollage som present: 24 egna foton i mosaikdesign",
-  "beskrivelse": "Bästa vännen har varit med på allt, från första lägenheten till semestern i fjol. Välj 24 foton från allt ni har gjort och ge henne hela mosaiken.",
-  "link": "https://www.hjemegn.se/products/fotokollage-med-24-foton-mosaikdesign?utm_source=pinterest&utm_medium=social&utm_campaign=se-start&utm_content=2026-11-17-se-fotokollage-med-24-foton-mos",
-  "fil": "2026-11-17-se-fotokollage-med-24-foton-mos.jpg",
-  "bytes": 192553,
-  "billedkontrol": "GODKENDT",
-  "tekstkontrol": "GODKENDT"
- },
- {
   "id": "2026-11-18-se-ekorrar-i-tradet",
   "dato": "2026-11-18",
   "tavle": "Julklappstips",
@@ -234,19 +221,6 @@
   "tekstkontrol": "GODKENDT"
  },
  {
-  "id": "2026-11-22-pinterest-se",
-  "dato": "2026-11-22",
-  "tavle": "Inredning med affischer",
-  "status": "klar",
-  "titel": "Tystberga poster: stadskarta i ockra och brunt, inflyttningspresent och personlig inredning",
-  "beskrivelse": "Järnvägen, vattendragen och de roströda husen i varma ockratoner, med Tystberga i stor skrift längst ner. En stadskarta för dig som bor där eller växte upp där, eller en inflyttningspresent till någon som tycker om orten. Välj mellan åtta färger och tre storlekar.",
-  "link": "https://www.hjemegn.se/products/stadskarta-tystberga-rektangular?utm_source=pinterest&utm_medium=social&utm_campaign=flow-stadskarta&utm_content=2026-11-22-pinterest-se",
-  "fil": "2026-11-22-pinterest-se.jpg",
-  "bytes": 179286,
-  "billedkontrol": "GODKENDT",
-  "tekstkontrol": "GODKENDT"
- },
- {
   "id": "2026-11-23-pinterest-se",
   "dato": "2026-11-23",
   "tavle": "Naturaffischer",
@@ -269,6 +243,45 @@
   "link": "https://www.hjemegn.se/products/vindkraft-pa-landet-naturaffisch?utm_source=pinterest&utm_medium=social&utm_campaign=flow-natur&utm_content=2026-11-24-pinterest-se",
   "fil": "2026-11-24-pinterest-se.jpg",
   "bytes": 179192,
+  "billedkontrol": "GODKENDT",
+  "tekstkontrol": "GODKENDT"
+ },
+ {
+  "id": "2026-11-22-pinterest-se",
+  "dato": "2026-11-22",
+  "tavle": "Inredning med affischer",
+  "status": "klar",
+  "titel": "Tystberga poster i grått: stadskarta som inflyttningspresent eller personlig inredning",
+  "beskrivelse": "Mörkgrå vägar och hus ligger mot ljusgrå åkrar, med orten mitt på kartan och namnet i ljus skrift på ett mörkgrått band längst ner. En lugn stadskarta för dig som bor i Tystberga eller växte upp där, och en fin inflyttningspresent till den som precis har flyttat dit.",
+  "link": "https://www.hjemegn.se/products/stadskarta-tystberga-rektangular?utm_source=pinterest&utm_medium=social&utm_campaign=flow-stadskarta&utm_content=2026-11-22-pinterest-se",
+  "fil": "2026-11-22-pinterest-se.jpg",
+  "bytes": 180908,
+  "billedkontrol": "GODKENDT",
+  "tekstkontrol": "GODKENDT"
+ },
+ {
+  "id": "2026-11-25-pinterest-se",
+  "dato": "2026-11-25",
+  "tavle": "Inredning med affischer",
+  "status": "klar",
+  "titel": "Klågerup poster i blått: stadskarta och personlig present till någon från Klågerup",
+  "beskrivelse": "En lång väg drar snett över kartan, och ute bland åkrarna runt Klågerups villagator ligger små mörkblå dammar. Rödbruna vägar ger det blå lite värme, och namnet står i ljusblått på ett mörkt band längst ner. En personlig present till den som bor i Klågerup eller har växt upp där.",
+  "link": "https://www.hjemegn.se/products/stadskarta-klagerup-rektangular?utm_source=pinterest&utm_medium=social&utm_campaign=flow-stadskarta&utm_content=2026-11-25-pinterest-se",
+  "fil": "2026-11-25-pinterest-se.jpg",
+  "bytes": 144781,
+  "billedkontrol": "GODKENDT",
+  "tekstkontrol": "GODKENDT"
+ },
+ {
+  "id": "2026-11-26-pinterest-se",
+  "dato": "2026-11-26",
+  "tavle": "Inredning med affischer",
+  "status": "klar",
+  "titel": "Bälinge stadskarta i blått: poster som födelsedagspresent till någon från Bälinge",
+  "beskrivelse": "Till dig som har flyttat från Bälinge men gärna tar med dig orten. Villagatorna fyller hela mitten av stadskartan, där de mörkblå husen står tätt bland ljusare blå ytor. Ge postern i födelsedagspresent, eller gör ditt eget hem lite mer personligt.",
+  "link": "https://www.hjemegn.se/products/stadskarta-balinge-rektangular?utm_source=pinterest&utm_medium=social&utm_campaign=flow-stadskarta&utm_content=2026-11-26-pinterest-se",
+  "fil": "2026-11-26-pinterest-se.jpg",
+  "bytes": 216033,
   "billedkontrol": "GODKENDT",
   "tekstkontrol": "GODKENDT"
  }
