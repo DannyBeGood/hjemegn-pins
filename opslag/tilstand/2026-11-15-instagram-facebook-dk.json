@@ -17,7 +17,8 @@
   }
  },
  "facebook": {
-  "status": "afventer",
-  "forsoeg": 0
+  "status": "forsoegt",
+  "forsoeg": 0,
+  "forsoeg_tid": "2026-11-15T18:30:32+00:00"
  }
 }
