@@ -17,8 +17,10 @@
   }
  },
  "facebook": {
-  "status": "forsoegt",
+  "status": "udgivet",
   "forsoeg": 0,
-  "forsoeg_tid": "2026-11-17T18:30:36+00:00"
+  "forsoeg_tid": "2026-11-17T18:30:36+00:00",
+  "post_id": "112809440436915_1167674672500794",
+  "fejl": null
  }
 }
