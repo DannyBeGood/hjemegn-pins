@@ -9,7 +9,11 @@
   "container": "18113117570184950",
   "forsoeg_tid": "2026-11-17T18:30:19+00:00",
   "media_id": "17979160476169367",
-  "fejl": null
+  "fejl": null,
+  "kommentar": {
+   "status": "forsoegt",
+   "forsoeg": 1
+  }
  },
  "facebook": {
   "status": "afventer",
