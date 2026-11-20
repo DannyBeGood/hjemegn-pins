@@ -4,10 +4,12 @@
  "koersel": "241a1de909",
  "overtaget": "2026-11-20T18:30:03+00:00",
  "instagram": {
-  "status": "forsoegt",
+  "status": "udgivet",
   "forsoeg": 0,
   "container": "18113366897184950",
-  "forsoeg_tid": "2026-11-20T18:30:16+00:00"
+  "forsoeg_tid": "2026-11-20T18:30:16+00:00",
+  "media_id": "18118035200040318",
+  "fejl": null
  },
  "facebook": {
   "status": "afventer",
