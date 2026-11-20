@@ -11,8 +11,8 @@
   "media_id": "18118035200040318",
   "fejl": null,
   "kommentar": {
-   "status": "afventer",
-   "forsoeg": 1,
+   "status": "forsoegt",
+   "forsoeg": 2,
    "fejl": "POST /v26.0/18118035200040318/comments: HTTP 400 kode 10: (#10) Application does not have permission for this action"
   }
  },
