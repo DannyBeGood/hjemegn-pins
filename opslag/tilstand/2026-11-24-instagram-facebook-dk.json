@@ -4,8 +4,9 @@
  "koersel": "1e10fd0214",
  "overtaget": "2026-11-24T19:00:03+00:00",
  "instagram": {
-  "status": "afventer",
-  "forsoeg": 0
+  "status": "container",
+  "forsoeg": 0,
+  "container": "18113714762184950"
  },
  "facebook": {
   "status": "afventer",
