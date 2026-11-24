@@ -21,6 +21,10 @@
   "forsoeg": 0,
   "forsoeg_tid": "2026-11-24T19:00:33+00:00",
   "post_id": "112809440436915_1174831491785112",
-  "fejl": null
+  "fejl": null,
+  "kommentar": {
+   "status": "forsoegt",
+   "forsoeg": 1
+  }
  }
 }
