@@ -1,0 +1,14 @@
+{
+ "id": "2026-11-24-instagram-facebook-dk",
+ "status": "i_gang",
+ "koersel": "10560b6862",
+ "overtaget": "2026-11-24T18:30:02+00:00",
+ "instagram": {
+  "status": "afventer",
+  "forsoeg": 0
+ },
+ "facebook": {
+  "status": "afventer",
+  "forsoeg": 0
+ }
+}
