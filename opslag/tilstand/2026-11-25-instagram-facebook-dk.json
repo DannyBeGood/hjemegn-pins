@@ -9,6 +9,10 @@
   "container": "18113785274184950",
   "forsoeg_tid": "2026-11-25T18:30:15+00:00",
   "media_id": "18137868802671898",
-  "fejl": null
+  "fejl": null,
+  "kommentar": {
+   "status": "forsoegt",
+   "forsoeg": 1
+  }
  }
 }
