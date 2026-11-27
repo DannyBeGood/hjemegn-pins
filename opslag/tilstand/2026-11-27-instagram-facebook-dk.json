@@ -23,7 +23,7 @@
   "post_id": "112809440436915_1178175441450717",
   "fejl": null,
   "kommentar": {
-   "status": "forsoegt",
+   "status": "afventer",
    "forsoeg": 2,
    "fejl": "POST /v26.0/112809440436915_1178175441450717/comments: HTTP 403 kode 200: (#200) You do not have sufficient permissions to perform this action"
   }
